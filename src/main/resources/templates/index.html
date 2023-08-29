@@ -6,27 +6,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <h1>Die Liste der Peronen</h1>
-    </header>
-    <table class="table table-dark table-striped">
-        <thead>
-        <tr>
-            <th>Vorname</th>
-            <th>Nachname</th>
-            <th>Beruf</th>
-            <th>Alter</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="person : ${personList}">
-            <td th:text="${person.vorname}"></td>
-            <td th:text="${person.nachname}"></td>
-            <td th:text="${person.beruf}"></td>
-            <td th:text="${person.alter}"></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="md-col-4">
+                <header>
+                    <h1>Die Liste der Personen</h1>
+                </header>
+                <table class="table table-dark table-striped">
+                    <thead>
+                    <tr>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>Beruf</th>
+                        <th>Alter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="person : ${personList}">
+                        <td th:text="${person.vorname}"></td>
+                        <td th:text="${person.nachname}"></td>
+                        <td th:text="${person.beruf}"></td>
+                        <td th:text="${person.alter}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="md-col-4">
+                <header>
+                    <h1>Die Liste der Waffen</h1>
+                </header>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Material</th>
+                        <th>Länge</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="weapon : ${weapongList}">
+                        <td th:text="${weapon.bezeichnung}"></td>
+                        <td th:text="${weapon.material}"></td>
+                        <td th:text="${weapon.laenge}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

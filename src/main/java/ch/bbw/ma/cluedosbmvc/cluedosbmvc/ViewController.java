@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ViewController {
     @Autowired
 
-
     private final DateService service;
     @Autowired
     public ViewController(DateService service){
@@ -20,6 +19,7 @@ public class ViewController {
 
     public String showList(Model model){
         model.addAttribute("personList", service.getPersonList());
+        model.addAttribute("weapongList", service.getWeaponList());
         System.out.println("ViewController.showList");
         return "index";
     }
