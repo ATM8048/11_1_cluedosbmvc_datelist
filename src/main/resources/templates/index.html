@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="md-col-4">
+            <div class="col-md-4">
                 <header>
                     <h1>Die Liste der Personen</h1>
                 </header>
@@ -31,7 +31,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="md-col-4">
+            <div class="col-md-4">
                 <header>
                     <h1>Die Liste der Waffen</h1>
                 </header>
@@ -48,6 +48,29 @@
                         <td th:text="${weapon.bezeichnung}"></td>
                         <td th:text="${weapon.material}"></td>
                         <td th:text="${weapon.laenge}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <header>
+                    <h1>Die Liste der Tatorten</h1>
+                </header>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Grösse</th>
+                        <th>Anzahl Fenster</th>
+                        <th>Anzahl Türe</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="room : ${roomList}">
+                        <td th:text="${room.bezeichnung}"></td>
+                        <td th:text="${room.groesse}"></td>
+                        <td th:text="${room.anzahl_fenster}"></td>
+                        <td th:text="${room.anzahl_tuere}"></td>
                     </tr>
                     </tbody>
                 </table>

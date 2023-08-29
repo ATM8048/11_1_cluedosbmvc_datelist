@@ -20,6 +20,7 @@ public class ViewController {
     public String showList(Model model){
         model.addAttribute("personList", service.getPersonList());
         model.addAttribute("weapongList", service.getWeaponList());
+        model.addAttribute("roomList", service.getRoomList());
         System.out.println("ViewController.showList");
         return "index";
     }
