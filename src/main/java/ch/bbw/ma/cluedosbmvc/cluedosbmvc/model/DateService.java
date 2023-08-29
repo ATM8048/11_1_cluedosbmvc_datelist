@@ -21,7 +21,15 @@ public class DateService {
                     new Weapon("Dolch", "Eisen", 30),
                     new Weapon("Bogen", "Holz", 120),
                     new Weapon("Schwert", "Stahl", 90)));
+
+    private List<Room> roomList = new ArrayList<>(
+            Arrays.asList(
+                new Room("Wohnzimmer", "20m²", 2, 1),
+                    new Room("Schlafzimmer", "15m²", 1, 1),
+                    new Room("Küche", "10m²", 1, 0)));
+
     //Hier werden Funktionen erstellt
     public List<Person> getPersonList(){return personList;}
     public List<Weapon> getWeaponList(){return weaponList;}
+    public List<Room> getRoomList(){return roomList;}
 }
